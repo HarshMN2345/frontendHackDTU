@@ -13,7 +13,7 @@ export default function Login() {
         const handleSubmit = async (e) => {
           e.preventDefault();
           try {
-            const url = "http://localhost:8080/api/auth";
+            const url = "https://backend-hack-dtu.vercel.app/api/auth";
             const res = await axios.post(url, Data);
             localStorage.setItem("token", res.data.data)
             window.location='/'
