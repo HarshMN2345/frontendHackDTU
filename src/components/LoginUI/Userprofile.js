@@ -15,7 +15,7 @@ export default function Userprofile(props) {
           <div className='flex justify-center pb-6'>
           <img className = "w-32" src='./profile-user.png'></img>
           </div>
-          <Link to="/"><button class='p-1 bg-green-500 text-white rounded-lg px-5 py-2 hover:bg-green-800' onClick={props.logout}>Logout</button></Link>
+          <Link to="/"><button class='p-1 md:hidden bg-green-500 text-white rounded-lg px-5 py-2 hover:bg-green-800' onClick={props.logout}>Logout</button></Link>
           <h1 className="text-2xl font-bold mb-4">Welcome back {username}! </h1>
           <p className="text-gray-700">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin

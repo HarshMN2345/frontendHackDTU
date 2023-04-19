@@ -42,7 +42,7 @@ export default function Navbar(props) {
             {props.loggedIn ? (
               <>
                 <button
-                  class='p-1 bg-green-500 md:hidden text-white rounded-lg px-5 py-2 hover:bg-green-800'
+                  class='p-1 bg-green-500 sm:hidden text-white rounded-lg px-5 py-2 hover:bg-green-800'
                   onClick={props.logout}
                 >
                   Logout
