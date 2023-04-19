@@ -2,14 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
-  const [loggedIn, setLoggedIn] = useState(!!localStorage.getItem('token'));
   const [open, setOpen] = useState(false);
-
-  const logout = () => {
-    localStorage.removeItem('token');
-    setLoggedIn(false);
-  };
-
   return (
     <>
       <div>
@@ -46,11 +39,11 @@ export default function Navbar(props) {
             </li>
           </ul>
           <div class='flex items-center gap-6'>
-            {loggedIn ? (
+            {props.loggedIn ? (
               <>
                 <button
-                  class='p-1 bg-green-500 text-white rounded-lg px-5 py-2 hover:bg-green-800'
-                  onClick={logout}
+                  class='p-1 bg-green-500 md:hidden text-white rounded-lg px-5 py-2 hover:bg-green-800'
+                  onClick={props.logout}
                 >
                   Logout
                 </button>

@@ -1,8 +1,9 @@
 import React from 'react';
 import SignUp from './components/LoginUI/SignUp';
 import Login from './components/LoginUI/Login';
-import userProfile from './components/LoginUI/userProfile';
+import Userprofile from './components/LoginUI/Userprofile';
 // import ResetPassword from './components/LoginUI/ResetPassword';
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import {
   BrowserRouter as Router,
@@ -12,15 +13,26 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(!!localStorage.getItem('token'));
+  
+  const logout = () => {
+  
+    if(window.confirm("Are you sure you want to log out?")===true){
+      localStorage.removeItem('token');
+      setLoggedIn(false);
+    }
+  };
+
   return (
     <>
     <Router>
-    <Navbar/>
+      
+    <Navbar logout={logout} loggedIn={loggedIn} />
     <Routes>
     <Route exact path="/"/>
     <Route path="/signup" exact element={<SignUp />} />
-		<Route path="/login" exact element={<Login />} />
-    <Route path="/userProfile.js" exact element={<userProfile />} />
+		<Route path="/login" exact element={<Login logout={logout} loggedIn={loggedIn}/>} />
+    <Route path="/userProfile" exact element={<Userprofile logout={logout} />} />
 		<Route path="/" exact element={<Navigate replace to="/login"/>}/>
     </Routes>
     </Router>

@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import axios from "axios";
 import { Link } from 'react-router-dom';
-export default function Login() {
+export default function Login(props) {
     const [Data, setData] = useState({
         email:"",
         password:""
@@ -13,9 +13,10 @@ export default function Login() {
         const handleSubmit = async (e) => {
           e.preventDefault();
           try {
-            const url = "https://backend-hack-dtu.vercel.app/api/auth";
+            const url = "http://backend-hack-dtu.vercel.app/api/auth";
             const res = await axios.post(url, Data);
-            localStorage.setItem("token", res.data.data)
+            localStorage.setItem("token", res.data.token);
+            localStorage.setItem("username", res.data.username);
             window.location='/'
           } catch (error) {
             if (
