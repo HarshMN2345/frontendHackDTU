@@ -18,7 +18,7 @@ export default function Navbar(props) {
             }`}
           >
             <li class='md:ml-8 text-xl md:my-0 my-7'>
-              <Link class='hover:text-gray-500 duration-500' to='/'>
+              <Link class='hover:text-gray-500 duration-500' to='/guide'>
                 Hello
               </Link>
             </li>

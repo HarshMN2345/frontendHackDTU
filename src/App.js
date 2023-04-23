@@ -2,6 +2,7 @@ import React from 'react';
 import SignUp from './components/LoginUI/SignUp';
 import Login from './components/LoginUI/Login';
 import Userprofile from './components/LoginUI/Userprofile';
+import WasteSegregationGuide from './components/LoginUI/WasteSegregationGuide';
 // import ResetPassword from './components/LoginUI/ResetPassword';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
@@ -34,6 +35,7 @@ function App() {
 		<Route path="/login" exact element={<Login logout={logout} loggedIn={loggedIn}/>} />
     <Route path="/userProfile" exact element={<Userprofile logout={logout} />} />
 		<Route path="/" exact element={<Navigate replace to="/login"/>}/>
+    <Route path="/guide" exact element={<WasteSegregationGuide/>}/>
     </Routes>
     </Router>
     </>

@@ -8,7 +8,7 @@ export default function Signup(props) {
     email:"",
     password:""
   })
-  const [error, setError] = useState("")
+    const [error, setError] = useState("")
     const navigate = useNavigate();  
     const handleChange=({currentTarget:input})=>{
       setData({...Data,[input.name]:input.value})
@@ -16,7 +16,7 @@ export default function Signup(props) {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const url = "https://backend-hack-dtu.vercel.app/api/user";
+        const url = "http://localhost:8080/api/user";
         const { Data: res } = await axios.post(url, Data);
         navigate("/login");
         console.log(res.message);
