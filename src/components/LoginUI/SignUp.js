@@ -79,19 +79,6 @@ export default function Signup(props) {
               placeholder="Enter your Password"
             />
           </div>
-            {/* <div className="mb-4">
-            <div>
-              <label className="block text-gray-700 font-bold mb-2">
-                Confirm Password
-              </label>
-              <input
-                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="password"
-                type="password"
-                placeholder="Re-Enter your Password"
-              />
-            </div>
-            </div> */}
             {error && <div>{error}</div>}
             <button
               className="bg-green-500 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

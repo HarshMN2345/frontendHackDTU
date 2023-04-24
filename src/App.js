@@ -5,13 +5,16 @@ import Userprofile from './components/LoginUI/Userprofile';
 import WasteSegregationGuide from './components/LoginUI/WasteSegregationGuide';
 // import ResetPassword from './components/LoginUI/ResetPassword';
 import { useState } from 'react';
-import Navbar from './components/Navbar';
+import { AboutUs, Chef, FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu } from './container'
+import Navbar from './components/Navbar/Navbar';
+
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
 } from "react-router-dom";
+import './App.css';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(!!localStorage.getItem('token'));
@@ -29,9 +32,18 @@ function App() {
     <Router>
       
     <Navbar logout={logout} loggedIn={loggedIn} />
+    <Header />
+    <AboutUs />
+    <SpecialMenu />
+    <Intro />
+    <Chef />
+    <Laurels />
+    <Gallery />
+    <FindUs />
+    <Footer />
     <Routes>
     <Route exact path="/"/>
-    <Route path="/signup" exact element={<SignUp />} />
+    <Route path="/signup" exact element={<SignUp/>} />
 		<Route path="/login" exact element={<Login logout={logout} loggedIn={loggedIn}/>} />
     <Route path="/userProfile" exact element={<Userprofile logout={logout} />} />
 		<Route path="/" exact element={<Navigate replace to="/login"/>}/>
