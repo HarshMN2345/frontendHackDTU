@@ -34,11 +34,11 @@ export default function Signup(props) {
     <>
      <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
      <Link to="/"><div className="absolute top-3 right-4 text-4xl cursor-pointer"><ion-icon onClick={props.toggle} name='close'></ion-icon></div></Link>
-      <div className="bg-white rounded-md shadow-md p-8">
-        <h2 className="text-2xl font-bold mb-4">Sign Up</h2>
+      <div className=" bg-green-700 rounded-md shadow-md p-10 border:2px border-green-950">
+        <h2 className="text-3xl font-bold mb-4 text-white ">Sign Up</h2>
         <form onSubmit={handleSubmit}>
         <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2">
+            <label className="block text-white font-bold mb-2">
             Name
             </label>
             <input
@@ -52,7 +52,7 @@ export default function Signup(props) {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2">
+            <label className="block text-white font-bold mb-2">
             Email ID
             </label>
             <input
@@ -66,7 +66,7 @@ export default function Signup(props) {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2">
+            <label className="block text-white font-bold mb-2">
               Password
             </label>
             <input
@@ -81,12 +81,12 @@ export default function Signup(props) {
           </div>
             {error && <div>{error}</div>}
             <button
-              className="bg-green-500 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-green-950 hover:bg-green-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit" 
             >
               Sign Up
             </button>
-            <Link to={"/login"}><p className='hover:text-gray-600 cursor-pointer mt-3'>
+            <Link to={"/login"}><p className='hover: font-extrabold cursor-pointer mt-3'>
               <strong>Already have an account? Login</strong> 
               </p></Link>
         </form>

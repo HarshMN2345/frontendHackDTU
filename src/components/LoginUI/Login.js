@@ -32,11 +32,11 @@ export default function Login(props) {
     <>
     <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
      <div className="absolute top-3 right-4 text-4xl cursor-pointer"><Link to={'/'}><ion-icon name='close'></ion-icon></Link></div>
-      <div className="bg-white rounded-md shadow-md p-8">
-        <h2 className="text-2xl font-bold mb-4">Login</h2>
+      <div className="bg-green-700 rounded-md shadow-md p-10">
+        <h2 className="text-3xl font-bold mb-4 text-white">Login</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2">
+            <label className="block text-white font-bold mb-2">
             Email ID
             </label>
             <input
@@ -50,7 +50,7 @@ export default function Login(props) {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2">
+            <label className="block text-white font-bold mb-2">
               Password
             </label>
             <input
@@ -65,13 +65,13 @@ export default function Login(props) {
           </div>         
             {error && <div>{error}</div>}
             <button
-              className="bg-green-500 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-green-900 hover:bg-green-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit" 
             >
               Login
             </button>
-            <Link to={"/reset"}><p className='hover:text-gray-600 cursor-pointer mt-3'>
-              <strong>Forgot Password? Reset your credentials</strong>
+            <Link to={"/reset"}><p className='hover:text-black font-extrabold cursor-pointer mt-3 text-center'>
+              <strong>Forgot Password?</strong>
             </p></Link>
         </form>
       </div>
