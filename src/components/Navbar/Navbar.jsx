@@ -17,6 +17,7 @@ const Navbar = (props) => {
         <li className="p__opensans"><a href="#about">About</a></li>
         <li className="p__opensans"><a href="#menu">Sustainability Hub</a></li>
         <li className="p__opensans"><a href="#awards">Awards</a></li>
+        <li className="p__opensans"><Link to="/guide">Collection Schedule</Link></li>
         <li className="p__opensans"><a href="#contact">Contact</a></li>
       </ul>
       <div className="app__navbar-login">
@@ -43,6 +44,7 @@ const Navbar = (props) => {
               <li><a href="#about" onClick={() => setToggleMenu(false)}>Our Mission</a></li>
               <li><a href="#menu" onClick={() => setToggleMenu(false)}>Sustainability Hub</a></li>
               <li><a href="#awards" onClick={() => setToggleMenu(false)}>Awards</a></li>
+              <li className="p__opensans"><a href="#schedule">Collection Schedule</a></li>
               <li><a href="#contact" onClick={() => setToggleMenu(false)}>Contact</a></li>
             </ul>
           </div>
