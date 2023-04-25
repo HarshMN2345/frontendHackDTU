@@ -2,7 +2,7 @@ import React from 'react';
 import SignUp from './components/LoginUI/SignUp';
 import Login from './components/LoginUI/Login';
 import Userprofile from './components/LoginUI/Userprofile';
-import WasteSegregationGuide from './components/LoginUI/WasteSegregationGuide';
+import WasteSegregationGuide from './components/LoginUI/locationfetch';
 // import ResetPassword from './components/LoginUI/ResetPassword';
 import { useState } from 'react';
 import { AboutUs, Chef, FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu } from './container'
