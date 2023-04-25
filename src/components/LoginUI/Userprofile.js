@@ -69,7 +69,7 @@ export default function Userprofile(props) {
 <br/>
           <div class="text-center">
           <Link to="/">
-          <button class="p-1 bg-green-500 text-white rounded-lg px-5 py-2 hover:bg-green-800 border-10 border-black">
+          <button onClick={props.logout} class="p-1 bg-green-500 text-white rounded-lg px-5 py-2 hover:bg-green-800 border-10 border-black">
            Logout
           </button>
           </Link>
