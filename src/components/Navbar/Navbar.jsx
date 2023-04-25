@@ -32,7 +32,7 @@ const Navbar = (props) => {
             )}
         
         <div />
-        <a href="/" className="p__opensans">GET SUPPORT</a>
+        <a href="#contact" className="p__opensans">GET SUPPORT</a>
       </div>
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggleMenu(true)} />
